@@ -1,13 +1,21 @@
+# ⚠️️ **Snapcast fork - Work in Progress** ⚠️
+We are in the process of forking this repo in an attempt to give space for contributions to made building on the great work of the original developer [badaix](https://github.com/badaix/snapcast). We also hope that the organisation might provide a home for those that would like a dockerised build, as well as the various UIs and libraries that support Snapcast.
+
+We've got a number of things to straighten out to establish the fork, like getting the builds right, setting up releases, getting an idea of who's interested in helping to maintain the fork and getting an idea of what new features and existing PRs we want to bring over.
+
+If you're interested in supporting this effort, please reach out on Gitter
+
 Snapcast
 ========
 
-![Snapcast](https://raw.githubusercontent.com/badaix/snapcast/master/doc/Snapcast_800.png)
+![Snapcast](https://raw.githubusercontent.com/snapcast/snapcast/master/doc/Snapcast_800.png)
 
 **S**y**n**chronous **a**udio **p**layer  
-  
+
+[![Gitter](https://badges.gitter.im/Snapcast/community.svg)](https://gitter.im/Snapcast/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build Status](
-https://travis-ci.org/badaix/snapcast.svg?branch=master)](https://travis-ci.org/badaix/snapcast)
-[![Github Releases](https://img.shields.io/github/release/badaix/snapcast.svg)](https://github.com/badaix/snapcast/releases)
+https://travis-ci.org/snapcast/snapcast.svg?branch=master)](https://travis-ci.org/snapcast/snapcast)
+[![Github Releases](https://img.shields.io/github/release/snapcast/snapcast.svg)](https://github.com/snapcast/snapcast/releases)
 
 Snapcast is a multi-room client-server audio player, where all clients are time synchronized with the server to play perfectly synced audio. It's not a standalone player, but an extension that turns your existing audio player into a Sonos-like multi-room solution.
 The server's audio input is a named pipe `/tmp/snapfifo`. All data that is fed into this file will be send to the connected clients. One of the most generic ways to use Snapcast is in conjunction with the music player daemon ([MPD](http://www.musicpd.org/)) or [Mopidy](https://www.mopidy.com/), which can be configured to use a named pipe as audio output.
@@ -43,7 +51,7 @@ Please follow this [guide](doc/build.md) to build Snapcast for
   * [Raspberry Pi](doc/build.md#raspberry-pi-cross-compile)
 
 ### Install linux packages
-For Debian download the package for your CPU architecture from the [latest release page](https://github.com/badaix/snapcast/releases/latest), e.g. for Raspberry pi `snapclient_0.x.x_armhf.deb`
+For Debian download the package for your CPU architecture from the [latest release page](https://github.com/snapcast/snapcast/releases/latest), e.g. for Raspberry pi `snapclient_0.x.x_armhf.deb`
 Install the package:
 
     $ sudo dpkg -i snapclient_0.x.x_armhf.deb
@@ -105,9 +113,9 @@ Snapcast can be controlled using a [JSON-RPC API](doc/json_rpc_api/v2_0_0.md):
 * Assign a client to a stream
 * ...
 
-There is an Android client [snapdroid](https://github.com/badaix/snapdroid) available in [Releases](https://github.com/badaix/snapdroid/releases/latest) and on [Google Play](https://play.google.com/store/apps/details?id=de.badaix.snapcast)
+There is an Android client [snapdroid](https://github.com/snapcast/snapdroid) available in [Releases](https://github.com/snapcast/snapdroid/releases/latest) and on [Google Play](https://play.google.com/store/apps/details?id=de.badaix.snapcast)
 
-![Snapcast for Android](https://raw.githubusercontent.com/badaix/snapcast/master/doc/snapcast_android_scaled.png)
+![Snapcast for Android](https://raw.githubusercontent.com/snapcast/snapcast/master/doc/snapcast_android_scaled.png)
 
 There is also an unofficial WebApp from @atoomic [atoomic/snapcast-volume-ui](https://github.com/atoomic/snapcast-volume-ui).
 This app list all clients connected to a server and allow to control individualy the volume of each client.
